@@ -83,6 +83,53 @@ h3,
   color: var(--gold-bright);
 }
 
+.contact-pill {
+  color: var(--gold-bright);
+  text-decoration: none;
+  border: 1px solid rgba(217, 176, 89, 0.35);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-pill:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.lang-btn {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.lang-btn:hover,
+.lang-btn.is-active {
+  background: var(--gold);
+  color: #1a1407;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -449,6 +496,7 @@ main > section:nth-of-type(6) { animation-delay: 0.5s; }
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
+  align-items: center;
   font-size: 0.9rem;
   color: var(--muted);
 }
@@ -559,6 +607,16 @@ main > section:nth-of-type(6) { animation-delay: 0.5s; }
 @media (max-width: 640px) {
   .brand {
     font-size: 0.9rem;
+  }
+
+  .lang-switch {
+    order: 2;
+  }
+
+  .contact-pill {
+    order: 3;
+    width: 100%;
+    text-align: center;
   }
 
   .site-header .btn {
